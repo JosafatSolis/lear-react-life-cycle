@@ -3,18 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-
-import "uikit/dist/css/uikit.min.css";
+import { BrowserRouter } from "react-router-dom";
 import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+import "uikit/dist/js/uikit-icons";
 
+// UIkit.use(Icons)
+
+const WithRouter = () => (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {WithRouter()}
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// Para quitar los warnings:
+// https://medium.com/fixtergeek/customize-eslint-rules-in-create-react-app-a82c45ed5f24
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

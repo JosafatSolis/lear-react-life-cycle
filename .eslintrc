@@ -1,0 +1,6 @@
+{
+    "extends": "react-app",
+    "rules": {
+        "jsx-ally/anchor-is-valid": 0
+    }
+}
